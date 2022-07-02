@@ -7,11 +7,15 @@ how to implement the main part in python and link it with qml
 the template does not include any python tests
 in my case i have python files + scripts elsewhere and just copy the .py modules (== folders) into qml
 i do preffer a single point of entry, that's why applicationWindow has python property, but you can declare the python interpreter on each page
- (as the jolla exampledoes ). according to docu they share the context. and this seems to be true: click on the upload button, python handler 
+ (as the jolla example does ). 
+ according to docu they share the context. and this seems to be true: click on the upload button, python handler 
  receives the events and complains they are not handled
  
 - you have your python logic with one or more main objects
 - extend pythonapp.py and create an object of each (in my case it was app=App())
+- extend pythonapp.py with needed wrapper methods
+- extend PythonHandler.qml with wrapper methods
+- use them via applicationWindow.python...
 
 
 # Tips
