@@ -30,11 +30,19 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import io.thp.pyotherside 1.5
 import "pages"
 
 ApplicationWindow
 {
+    id: applicationWindow
     initialPage: Component { FirstPage { } }
+
+    property Python python : pythonHandler
+    PythonHandler { // my central pythonHandler
+      id: pythonHandler
+    }
+
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
 }
 

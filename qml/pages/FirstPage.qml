@@ -51,6 +51,29 @@ Page {
         anchors.horizontalCenter: parent.horizontalCenter
     }
 
+
+    Button {
+        id: syncButton
+        anchors.topMargin: Theme.paddingLarge * 3 * Theme.pixelRatio
+        text: "Do it sync"
+        anchors.top: parent.top
+        width: parent.width
+        onClicked: {
+            applicationWindow.python.doItSync("baby !")
+        }
+    }
+    Button {
+        id: asyncButton
+        anchors.topMargin: Theme.paddingLarge * 1 * Theme.pixelRatio
+        text: "Do it async"
+        anchors.top: syncButton.bottom
+        width: parent.width
+        onClicked: {
+            applicationWindow.python.doItAsync("async baby ?!")
+        }
+    }
+
+
     ProgressBar {
         id: dlprogress
         label: "Downloading latest color trends."

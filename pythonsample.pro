@@ -19,9 +19,13 @@ SOURCES +=
 OTHER_FILES += qml/pythonsample.qml \
     qml/cover/CoverPage.qml \
     qml/pages/FirstPage.qml \
+    qml/PythonHandler.qml \
     rpm/pythonsample.changes.in \
     rpm/pythonsample.spec \
     rpm/pythonsample.yaml \
     pythonsample.desktop \
     qml/cover/coveractions.py \
     qml/pages/datadownloader.py
+
+DISTFILES += \
+    ReadMe.md
